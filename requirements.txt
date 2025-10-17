@@ -1,5 +1,8 @@
 pandas
-deutschland[destatis]
 requests
 beautifulsoup4
 lxml
+psycopg2-binary
+python-dotenv
+pycoingecko
+

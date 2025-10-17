@@ -1,0 +1,85 @@
+# -----------------------------
+#  PYTHON PROJECT GITIGNORE
+# -----------------------------
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example  # Allow a template env file if needed
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.pid
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# PyInstaller
+*.spec
+
+# Testing and coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.cache
+.pytest_cache/
+nosetests.xml
+
+# Database files
+*.sqlite3
+*.db
+*.sql
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.bz2
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Backup or temp
+*.bak
+*.swp
+*.swo
+
+# Optional: VSCode local history
+.history/
+
+# -----------------------------
+#  End of .gitignore
+# -----------------------------
