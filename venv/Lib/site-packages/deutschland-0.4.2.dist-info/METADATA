@@ -1,0 +1,248 @@
+Metadata-Version: 2.1
+Name: deutschland
+Version: 0.4.2
+Summary: 
+Home-page: https://github.com/bundesAPI/deutschland
+License: Apache-2.0
+Author: Lilith Wittmann
+Author-email: mail@lilithwittmann.de
+Requires-Python: >=3.8,<4
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: abfallnavi
+Provides-Extra: all
+Provides-Extra: ausbildungssuche
+Provides-Extra: berufssprachkurssuche
+Provides-Extra: bundeshaushalt
+Provides-Extra: bundestag-lobbyregister
+Provides-Extra: coachingangebote
+Provides-Extra: dashboarddeutschland
+Provides-Extra: destatis
+Provides-Extra: dip-bundestag
+Provides-Extra: ecovisio
+Provides-Extra: entgeltatlas
+Provides-Extra: feiertage
+Provides-Extra: hochwasserzentralen
+Provides-Extra: marktstammdaten
+Provides-Extra: pegel-online
+Provides-Extra: pflanzenschutzmittelzulassung
+Provides-Extra: studiensuche
+Provides-Extra: tagesschau
+Provides-Extra: vag
+Provides-Extra: weiterbildungssuche
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: dateparser (>=1.0.0,<2.0.0)
+Requires-Dist: de-abfallnavi (>=0.1.0,<0.2.0) ; extra == "abfallnavi" or extra == "all"
+Requires-Dist: de-ausbildungssuche (>=0.1.0,<0.2.0) ; extra == "ausbildungssuche" or extra == "all"
+Requires-Dist: de-autobahn (>=1.0.4,<2.0.0)
+Requires-Dist: de-berufssprachkurssuche (>=0.1.0,<0.2.0) ; extra == "berufssprachkurssuche" or extra == "all"
+Requires-Dist: de-bundeshaushalt (>=1.0.0,<2.0.0) ; extra == "bundeshaushalt" or extra == "all"
+Requires-Dist: de-bundesrat (>=0.1.0,<0.2.0)
+Requires-Dist: de-bundestag (>=0.1.0,<0.2.0)
+Requires-Dist: de-bundestag-lobbyregister (>=0.1.0,<0.2.0) ; extra == "bundestag-lobbyregister" or extra == "all"
+Requires-Dist: de-coachingangebote (>=0.1.0,<0.2.0) ; extra == "coachingangebote" or extra == "all"
+Requires-Dist: de-dashboarddeutschland (>=0.1.0,<0.2.0) ; extra == "dashboarddeutschland" or extra == "all"
+Requires-Dist: de-destatis (>=0.1.0,<0.2.0) ; extra == "destatis" or extra == "all"
+Requires-Dist: de-dip-bundestag (>=0.1.0,<0.2.0) ; extra == "dip-bundestag" or extra == "all" or extra == "all"
+Requires-Dist: de-dwd (>=1.0.1,<2.0.0)
+Requires-Dist: de-ecovisio (>=0.1.0,<0.2.0) ; extra == "ecovisio" or extra == "all"
+Requires-Dist: de-entgeltatlas (>=0.1.0,<0.2.0) ; extra == "entgeltatlas" or extra == "all"
+Requires-Dist: de-feiertage (>=1.0.1,<2.0.0) ; extra == "feiertage" or extra == "all"
+Requires-Dist: de-hochwasserzentralen (>=0.1.0,<0.2.0) ; extra == "hochwasserzentralen" or extra == "all"
+Requires-Dist: de-interpol (>=0.1.0,<0.2.0)
+Requires-Dist: de-jobsuche (>=0.1.0,<0.2.0)
+Requires-Dist: de-ladestationen (>=1.0.5,<2.0.0)
+Requires-Dist: de-marktstammdaten (>=0.1.0,<0.2.0) ; extra == "marktstammdaten" or extra == "all"
+Requires-Dist: de-mudab (>=0.1.0,<0.2.0)
+Requires-Dist: de-nina (>=1.0.1,<2.0.0)
+Requires-Dist: de-pegel-online (>=0.1.0,<0.2.0) ; extra == "pegel-online" or extra == "all"
+Requires-Dist: de-pflanzenschutzmittelzulassung (>=0.1.0,<0.2.0) ; extra == "pflanzenschutzmittelzulassung" or extra == "all"
+Requires-Dist: de-polizei-brandenburg (>=0.1.0,<0.2.0)
+Requires-Dist: de-risikogebiete (>=0.1.0,<0.2.0)
+Requires-Dist: de-smard (>=0.1.0,<0.2.0)
+Requires-Dist: de-strahlenschutz (>=1.0.0,<2.0.0)
+Requires-Dist: de-studiensuche (>=0.1.0,<0.2.0) ; extra == "studiensuche" or extra == "all"
+Requires-Dist: de-tagesschau (>=0.1.0,<0.2.0) ; extra == "tagesschau" or extra == "all"
+Requires-Dist: de-travelwarning (>=0.1.0,<0.2.0)
+Requires-Dist: de-vag (>=0.1.0,<0.2.0) ; extra == "vag" or extra == "all"
+Requires-Dist: de-weiterbildungssuche (>=0.1.0,<0.2.0) ; extra == "weiterbildungssuche" or extra == "all"
+Requires-Dist: de-zoll (>=0.1.0,<0.2.0)
+Requires-Dist: lxml (>=4.9.3,<5.0.0)
+Requires-Dist: mapbox-vector-tile (>=2.0.1,<3.0.0)
+Requires-Dist: more-itertools (>=8.10.0,<9.0.0)
+Requires-Dist: numpy (>=1.19.0,<2.0.0) ; python_version >= "3.8" and python_version < "3.12"
+Requires-Dist: numpy (>=1.26.2,<2.0.0) ; python_version >= "3.12"
+Requires-Dist: onnxruntime (>1.10.0,!=1.16.0)
+Requires-Dist: pandas (>2.1.2) ; python_version >= "3.12"
+Requires-Dist: pandas ; python_version >= "3.8" and python_version < "3.12"
+Requires-Dist: pillow (>=10.0.0,<11.0.0)
+Requires-Dist: requests (>=2.26.0,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/bundesAPI/deutschland/issues
+Project-URL: Repository, https://github.com/bundesAPI/deutschland
+Description-Content-Type: text/markdown
+
+[![PyPI version deutschland](https://badge.fury.io/py/deutschland.svg)](https://pypi.python.org/pypi/deutschland/)
+[![GitHub license](https://img.shields.io/github/license/bundesAPI/deutschland.svg)](https://github.com/bundesAPI/deutschland/blob/main/LICENSE)
+
+[![Lint](https://github.com/bundesAPI/deutschland/actions/workflows/black.yml/badge.svg?branch=main)](https://github.com/bundesAPI/deutschland/actions/workflows/black.yml)
+[![Publish Python 🐍 distributions 📦 to PyPI and TestPyPI](https://github.com/bundesAPI/deutschland/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/bundesAPI/deutschland/actions/workflows/publish.yml)
+[![Run Python 🐍 tests](https://github.com/bundesAPI/deutschland/actions/workflows/runtests.yml/badge.svg?branch=main)](https://github.com/bundesAPI/deutschland/actions/workflows/runtests.yml)
+
+# Deutschland
+A python package that gives you easy access to the most valuable datasets of Germany.
+
+## Installation
+```bash
+pip install deutschland
+```
+
+### Supported Python Versions
+```
+3.8 - 3.12
+```
+Tested on Linux, MacOS and Windows 
+
+[![Run Python 🐍 tests](https://github.com/bundesAPI/deutschland/actions/workflows/runtests.yml/badge.svg?branch=main)](https://github.com/bundesAPI/deutschland/actions/workflows/runtests.yml)
+
+
+### Development
+For development poetry version `>=1.2.0` is required.
+
+## Geographic data
+Fetch information about streets, house numbers, building outlines, …
+
+```python
+from deutschland.geo import Geo
+geo = Geo()
+# top_right and bottom_left coordinates
+data = geo.fetch([52.530116236589244, 13.426532801586827],
+                 [52.50876180448243, 13.359631043007212])
+print(data.keys())
+# dict_keys(['Adresse', 'Barrierenlinie', 'Bauwerksflaeche', 'Bauwerkslinie', 'Bauwerkspunkt', 'Besondere_Flaeche', 'Besondere_Linie', 'Besonderer_Punkt', 'Gebaeudeflaeche', 'Gebaeudepunkt', 'Gewaesserflaeche', 'Gewaesserlinie', 'Grenze_Linie', 'Historischer_Punkt', 'Siedlungsflaeche', 'Vegetationslinie', 'Verkehrsflaeche', 'Verkehrslinie', 'Verkehrspunkt', 'Hintergrund'])
+
+print(data["Adresse"][0])
+# {'geometry': {'type': 'Point', 'coordinates': (13.422642946243286, 52.51500157651358)}, 'properties': {'postleitzahl': '10179', 'ort': 'Berlin', 'ortsteil': 'Mitte', 'strasse': 'Holzmarktstraße', 'hausnummer': '55'}, 'id': 0, 'type': 'Feature'}
+```
+For the detailed documentation of this API see [here](https://adv-smart.de/docs/dokumentation/web_vektor_datenmodell.html)
+
+The data is provided by the [AdV SmartMapping](https://dev.adv-smart.de/). The team consists of participants from the German state surveying offices, the Federal Agency for Cartography and Geodesy (BKG), the German Federal Armed Forces (Bundeswehr ZGeoBW) and third parties from research and education.
+
+
+## Company Data
+
+### Bundesanzeiger
+Get financial reports for all german companies that are reporting to Bundesanzeiger.
+More
+```python
+from deutschland.bundesanzeiger import Bundesanzeiger
+ba = Bundesanzeiger()
+# search term
+data = ba.get_reports("Deutsche Bahn AG")
+# returns a dictionary with all reports found as fulltext reports
+print(data.keys())
+# dict_keys(['Jahresabschluss zum Geschäftsjahr vom 01.01.2020 bis zum 31.12.2020', 'Konzernabschluss zum Geschäftsjahr vom 01.01.2020 bis zum 31.12.2020\nErgänzung der Veröffentlichung vom 04.06.2021',
+```
+*Big thanks to [Nico Duldhardt](https://github.com/2start) and [Friedrich Eichenroth](https://github.com/eichenroth), who [supported this implementation with their machine learning model](https://av.tib.eu/media/52366).*
+
+### Handelsregister
+
+The code for the Handelsregister moved to this [repo](https://github.com/bundesAPI/handelsregister).
+
+## Consumer Protection Data
+
+### Lebensmittelwarnung
+Get current product warnings provided by the german federal portal lebensmittelwarnung.de.
+
+```python
+from deutschland.lebensmittelwarnung import Lebensmittelwarnung
+lw = Lebensmittelwarnung()
+# search by content type and region, see documetation for all available params
+data = lw.get("lebensmittel", "berlin")
+print(data)
+# [{'id': 19601, 'guid': 'https://www.lebensmittelwarnung.de/bvl-lmw-de/detail/lebensmittel/19601', 'pubDate': 'Fri, 10 Feb 2017 12:28:45 +0000', 'imgSrc': 'https://www.lebensmittelwarnung.de/bvl-lmw-de/opensaga/attachment/979f8cd3-969e-4a6c-9a8e-4bdd61586cd4/data.jpg', 'title': 'Sidroga Bio Säuglings- und Kindertee', 'manufacturer': 'Lebensmittel', 'warning': 'Pyrrolizidinalkaloide', 'affectedStates': ['Baden-Württemberg', '...']}]
+```
+
+## Federal Job Openings
+
+### NRW
+
+#### VERENA
+Get open substitute teaching positions in NRW from https://www.schulministerium.nrw.de/BiPo/Verena/angebote
+```python
+from deutschland.verena import Verena
+v = Verena()
+data = v.get()
+print(data)
+# a full example data can be found at deutschland/verena/example.md
+# [{ "school_id": "99999", "desc": "Eine Schule\nSchule der Sekundarstufe II\ndes Landkreis Schuling\n9999 Schulingen", "replacement_job_title": "Lehrkraft", "subjects": [ "Fach 1", "Fach 2" ], "comments": "Bemerkung zur Stelle: Testbemerkung", "duration": "01.01.2021 - 01.01.2022", ...} ...]
+```
+
+## Autobahn
+
+Get data from the Autobahn.
+
+```python
+from deutschland import autobahn
+from deutschland.autobahn.api import default_api
+
+from pprint import pprint
+
+autobahn_api_instance = default_api.DefaultApi()
+
+try:
+    # Auflistung aller Autobahnen
+    api_response = autobahn_api_instance.list_autobahnen()
+    pprint(api_response)
+
+    # Details zu einer Ladestation
+    station_id = "RUxFQ1RSSUNfQ0hBUkdJTkdfU1RBVElPTl9fMTczMzM="  # str |
+    api_response = autobahn_api_instance.get_charging_station(station_id)
+    pprint(api_response)
+
+except autobahn.ApiException as e:
+    print("Exception when calling DefaultApi->get_charging_station: %s\n" % e)
+```
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/autobahn/README.md)
+
+### Presseportal
+
+Not available for now due to changes in the API.
+
+## Auto-Generated API-Clients
+
+### bundesrat
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/bundesrat/README.md)
+### bundestag
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/bundestag/README.md)
+### destatis
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/destatis/README.md)
+### dwd
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/dwd/README.md)
+### interpol
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/interpol/README.md)
+### jobsuche
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/jobsuche/README.md)
+### ladestationen
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/ladestationen/README.md)
+### mudab
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/mudab/README.md)
+### nina
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/nina/README.md)
+### polizei_brandenburg
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/polizei_brandenburg/README.md)
+### risikogebiete
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/risikogebiete/README.md)
+### smard
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/smard/README.md)
+### strahlenschutz
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/strahlenschutz/README.md)
+### travelwarning
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/travelwarning/README.md)
+### zoll
+For the detailed documentation of this API see [here](https://github.com/bundesAPI/deutschland/blob/main/docs/zoll/README.md)
+

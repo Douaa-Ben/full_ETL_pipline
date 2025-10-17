@@ -1,0 +1,5 @@
+pandas
+deutschland[destatis]
+requests
+beautifulsoup4
+lxml
